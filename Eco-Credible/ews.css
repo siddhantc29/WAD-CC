@@ -1,0 +1,95 @@
+.imagediv{
+    padding-top: 12%;
+    max-width: 100%;
+    height: fit-content;
+}
+
+.name{
+    background-image: url('process\ image.jpg'); 
+    background-size: auto; 
+    background-position: center; 
+    background-repeat: no-repeat;
+    max-width: 100%;
+    max-height: 100%;
+    object-fit: scale-down
+    
+
+}
+
+body{
+    background-repeat: no-repeat;
+    background-position: center;
+    background-size: cover;
+}
+
+.textdiv {
+    color: aliceblue;
+    margin-top: 0.5%; 
+    padding-top: 1.5%;
+    margin-left: 3%; 
+    padding-left: 5%;
+    margin-right: 3%;
+    padding-right: 5%;
+    margin-bottom: 1%;
+    padding-bottom: 0.2%;
+    width: 100%;
+    height: auto;
+    
+    
+
+}
+
+
+.Ewastediv {
+    color: aliceblue;
+    /* margin-top: 0.5%; */
+    /* padding-top: 1.5%; */
+    /* margin-left: 3%; */
+    /* padding-left: 5%; */
+    /* margin-right: 3%; */
+    /* padding-right: 5%; */
+    /* margin-bottom: 1%; */
+    /* padding-bottom: 0.2%; */
+    /* width: 100%; */
+    /* height: auto; */
+    /* background-image: url('istockphoto-1254440706-612x612.jpg'); */
+    /* background-size: cover; */
+    /* background-position: center; */
+    /* background-repeat: no-repeat; */
+
+}
+
+.hazarddiv {
+    color: aliceblue;
+    /* margin-top: 0.5%; */
+    padding-top: 1.5%;
+    /* margin-left: 3%; */
+    padding-left: 5%;
+    /* margin-right: 3%; */
+    padding-right: 5%;
+    /* margin-bottom: 1%; */
+    padding-bottom: 0.2%;
+    width: 100%;
+    height: auto;
+    background-image: url('hazardous-waste-disposal.jpg');
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
+    
+}
+
+.blockquote {
+    color: chartreuse;
+    font-size: 35px;
+}
+
+.blockquote-footer {
+    color: green;
+    margin-bottom: 5%;
+    font-size: 25px;
+}
+
+.display-6 {
+    margin-bottom: 2%;
+    color: coral;
+}

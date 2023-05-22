@@ -1,0 +1,107 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>EcoCredible</title>
+   
+    <link href="https://cdnjs.cloudflare.com/ajax/libs/flowbite/1.6.4/flowbite.min.css"  rel="stylesheet" />
+     <link rel="stylesheet" href="contact.css">
+    <script src="https://kit.fontawesome.com/705f9f9701.js" crossorigin="anonymous"></script>
+    <style>
+      body {
+          background-color: black;
+         
+          
+      }
+      </style>
+    <nav class="bg-black px-2 sm:px-4 py-2.5 fixed w-full z-20 top-0 left-0 border-b border-green-800 ">
+        <div class="container flex flex-wrap items-center justify-between mx-auto">
+        <a href="index.html" class="flex items-center">
+            <img src="resources/ecocredible.png" class="h-6 mr-3 sm:h-9" alt="Flowbite Logo" >
+            <span class="self-center text-xl font-semibold text-white whitespace-nowrap "><h2 class="mb-2 text-2xl font-bold leading-none tracking-tight  md:text-3xl lg:text-5xl "><span class="text-green-600">EcoCredible</span></h2></span>
+        </a>
+        <div class="flex md:order-2">
+            <button type="button" class="text-white bg-green-700 hover:bg-green-800 focus:ring-4 focus:outline-none focus:ring-green-300 font-medium rounded-lg text-sm px-5 py-2.5 text-center mr-3 md:mr-0 ">Donate now!</button>
+            <button data-collapse-toggle="navbar-sticky" type="button" class="inline-flex items-center p-2 text-sm text-green-500 rounded-lg md:hidden hover:bg-green-100 focus:outline-none focus:ring-2 focus:ring-green-200" aria-controls="navbar-sticky" aria-expanded="false">
+              <span class="sr-only">Open main menu</span>
+              <svg class="w-6 h-6" aria-hidden="true" fill="currentColor" viewBox="0 0 20 20" xmlns="http://www.w3.org/2000/svg"><path fill-rule="evenodd" d="M3 5a1 1 0 011-1h12a1 1 0 110 2H4a1 1 0 01-1-1zM3 10a1 1 0 011-1h12a1 1 0 110 2H4a1 1 0 01-1-1zM3 15a1 1 0 011-1h12a1 1 0 110 2H4a1 1 0 01-1-1z" clip-rule="evenodd"></path></svg>
+          </button>
+        </div>
+        <div class="items-center justify-between hidden w-full md:flex md:w-auto md:order-1" id="navbar-sticky">
+          <ul class="flex flex-col p-4 mt-10  rounded-lg bg-black md:flex-row md:space-x-8 md:mt-0 md:text-sm md:font-medium md:border-0 md:bg-black">
+            <li>
+              <a href="index.html" class="block py-2 pl-3 pr-4 text-white bg-green-700 rounded md:bg-green-800 md:text-green-700 md:p-4" aria-current="page" >Home </a>
+            </li>
+            <li>
+              <a href="about.html" class="block py-2 pl-3 pr-4 text-gray-400 rounded hover:bg-gray-100 md:hover:bg-transparent md:hover:text-green-700 md:p-2 ">About us</a>
+            </li>
+            <li>
+              <a href="#" class="block py-1 pl-3 pr-4 text-gray-400 rounded hover:bg-gray-100 md:hover:bg-transparent md:hover:text-green-700 md:p-1 ">
+                <button id="dropdownOffsetButton" data-dropdown-toggle="dropdownOffset" data-dropdown-offset-distance="44" data-dropdown-offset-skidding="0" class="text-gray-400 hover:bg-green-800 focus:ring-4 focus:outline-none focus:ring-green-400 font-medium rounded-lg text-sm px-1 py-1 text-center inline-flex items-center" type="button">E-waste Services<svg class="w-4 h-4 ml-2" aria-hidden="true" fill="none" stroke="currentColor" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M19 9l-7 7-7-7"></path></svg></button></a>
+                <!-- Dropdown menu -->
+                <div id="dropdownOffset" class="z-10 hidden bg-black divide-y divide-gray-100 rounded-lg shadow w-44 border-2 border-green-800">
+                  <ul class="py-2 text-sm text-white " aria-labelledby="dropdownDefault">
+                    <li>
+                      <a href="ews.html" class="block px-4 py-2 hover:bg-green-800 ">Our Process</a>
+                    </li>
+                    <li>
+                      <a href="ews.html" class="block px-4 py-2 hover:bg-green-800 ">E-waste</a>
+                    </li>
+                    <li>
+                      <a href="ews.html" class="block px-4 py-2 hover:bg-green-800 ">Hazards</a>
+                    </li>
+                    
+                  </ul>
+              </div>
+            </li>
+            <li>
+              <a href="#" class="block py-2 pl-3 pr-4 text-gray-400 rounded hover:bg-gray-100 md:hover:bg-transparent md:hover:text-green-700 md:p-2 ">Data Erasure</a>
+            </li>
+            <li>
+              <a href="asset.html" class="block py-2 pl-3 pr-4 text-gray-400 rounded hover:bg-gray-100 md:hover:bg-transparent md:hover:text-green-700 md:p-2 ">Asset Management</a>
+            </li>
+            <li>
+              <a href="#" class="block py-1 pl-3 pr-4 text-gray-400 rounded hover:bg-gray-100 md:hover:bg-transparent md:hover:text-green-700 md:p-2 ">          <button id="dropdownOffsetButton1" data-dropdown-toggle="dropdownOffset1" data-dropdown-offset-distance="44" data-dropdown-offset-skidding="0" class="text-gray-400 hover:bg-green-800 focus:ring-4 focus:outline-none focus:ring-green-400 font-medium rounded-lg text-sm px-1 py-1 text-center inline-flex items-center" type="button">Other Services<svg class="w-4 h-4 ml-2" aria-hidden="true" fill="none" stroke="currentColor" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M19 9l-7 7-7-7"></path></svg></button></a>
+             <!-- Dropdown menu -->
+             <div id="dropdownOffset1" class="z-10 hidden bg-black divide-y divide-gray-100 rounded-lg shadow w-44 border-2 border-green-800">
+              <ul class="py-2 text-sm text-white " aria-labelledby="dropdownDefault">
+                <li>
+                  <a href="services.html#ose" class="block px-4 py-2 hover:bg-green-800 ">Sewage Treatment</a>
+                </li>
+                <li>
+                  <a href="services.html#oet" class="block px-4 py-2 hover:bg-green-800 ">Effluent Treatment</a>
+                </li>
+               
+              </ul>
+          </div>
+            </li>
+            <li>
+              <a href="#" class="block py-2 pl-3 pr-4 text-gray-400 rounded hover:bg-gray-100 md:hover:bg-transparent md:hover:text-green-700 md:p-2 ">Contact</a>
+            </li>
+          </ul>
+        </div>
+        </div>
+      </nav>
+      </head>
+<body>
+
+    <!-- <iframe class="ifr" style="width:500px; height:200px" src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3782.909789502405!2d73.82919661481344!3d18.532978287401793!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x3bc2bf7757e17bf5%3A0xb34436b5bc8af0e3!2sEco%20Credible%20Enviro%20Solutions%20Pvt.Ltd.!5e0!3m2!1sen!2sin!4v1681231546210!5m2!1sen!2sin"  allowfullscreen="" loading="lazy" referrerpolicy="no-referrer-when-downgrade"  ></iframe> -->
+
+    <div id="container">
+        <div class="map">
+            <iframe class="ifr" style="width:500px; height:200px" src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3782.909789502405!2d73.82919661481344!3d18.532978287401793!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x3bc2bf7757e17bf5%3A0xb34436b5bc8af0e3!2sEco%20Credible%20Enviro%20Solutions%20Pvt.Ltd.!5e0!3m2!1sen!2sin!4v1681231546210!5m2!1sen!2sin"  allowfullscreen="" loading="lazy" referrerpolicy="no-referrer-when-downgrade"  ></iframe>
+
+        </div>
+        <div class="map">
+            <iframe class="ifr" style="width:500px; height:200px" src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3782.909789502405!2d73.82919661481344!3d18.532978287401793!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x3bc2bf7757e17bf5%3A0xb34436b5bc8af0e3!2sEco%20Credible%20Enviro%20Solutions%20Pvt.Ltd.!5e0!3m2!1sen!2sin!4v1681231546210!5m2!1sen!2sin"  allowfullscreen="" loading="lazy" referrerpolicy="no-referrer-when-downgrade"  ></iframe>
+
+        </div>
+      </div>
+
+    
+   
+      
+</body>
+</html>

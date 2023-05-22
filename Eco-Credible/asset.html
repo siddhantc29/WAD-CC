@@ -1,0 +1,452 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Asset Management</title>
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha1/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-GLhlTQ8iRABdZLl6O3oVMWSktQOp6b7In1Zl3/Jr59b6EGGoI1aFkw7cmDA6j6gD" crossorigin="anonymous">
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha1/dist/js/bootstrap.bundle.min.js" integrity="sha384-w76AqPfDkMBDXo30jS1Sgez6pr3x5MlQ1ZAGC+nuZB+EYdgRZgiwxhTBTkF7CXvN" crossorigin="anonymous"></script>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Anek+Telugu:wght@100;200;500&display=swap" rel="stylesheet">
+    <script src="https://cdn.tailwindcss.com"></script>
+    <link href="https://cdnjs.cloudflare.com/ajax/libs/flowbite/1.6.4/flowbite.min.css"  rel="stylesheet" />
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/flowbite/1.6.4/flowbite.min.js"></script>
+    <script src="script.js"></script>
+    <script src="https://kit.fontawesome.com/705f9f9701.js" crossorigin="anonymous"></script>
+    <style>
+      body {
+          background-color: black;
+          font-family: 'Anek Telugu', sans-serif;
+          text-decoration-color: white;
+          
+      }
+  </style>
+
+
+<nav class="bg-black px-2 sm:px-4 py-2.5 fixed w-full z-20 top-0 left-0 border-b border-green-800 ">
+    <div class="container flex flex-wrap items-center justify-between mx-auto">
+    <a href="https://flowbite.com/" class="flex items-center">
+        <img src="resources/ecocredible.png" class="h-6 mr-3 sm:h-9" alt="Flowbite Logo" >
+        <span class="self-center text-xl font-semibold text-white whitespace-nowrap "><h2 class="mb-2 text-2xl font-bold leading-none tracking-tight  md:text-3xl lg:text-5xl "><span class="text-green-600">EcoCredible</span></h2></span>
+    </a>
+    <div class="flex md:order-2">
+        <button type="button" class="text-white bg-green-700 hover:bg-green-800 focus:ring-4 focus:outline-none focus:ring-green-300 font-medium rounded-lg text-sm px-5 py-2.5 text-center mr-3 md:mr-0 ">Donate now!</button>
+        <button data-collapse-toggle="navbar-sticky" type="button" class="inline-flex items-center p-2 text-sm text-green-500 rounded-lg md:hidden hover:bg-green-100 focus:outline-none focus:ring-2 focus:ring-green-200" aria-controls="navbar-sticky" aria-expanded="false">
+          <span class="sr-only">Open main menu</span>
+          <svg class="w-6 h-6" aria-hidden="true" fill="currentColor" viewbox="0 0 20 20" xmlns="http://www.w3.org/2000/svg"><path fill-rule="evenodd" d="M3 5a1 1 0 011-1h12a1 1 0 110 2H4a1 1 0 01-1-1zM3 10a1 1 0 011-1h12a1 1 0 110 2H4a1 1 0 01-1-1zM3 15a1 1 0 011-1h12a1 1 0 110 2H4a1 1 0 01-1-1z" clip-rule="evenodd"></path></svg>
+      </button>
+    </div>
+    <div class="items-center justify-between hidden w-full md:flex md:w-auto md:order-1" id="navbar-sticky">
+      <ul class="flex flex-col p-4 mt-10  rounded-lg bg-black md:flex-row md:space-x-8 md:mt-0 md:text-sm md:font-medium md:border-0 md:bg-black">
+        <li>
+          <a href="index.html" class="block py-2 pl-3 pr-4 text-gray-400 md:text-gray-400 md:p-4" aria-current="page" >Home </a>
+        </li>
+        <li>
+          <a href="about.html" class="block py-2 pl-3 pr-4 text-gray-400 rounded hover:bg-gray-100 md:hover:bg-transparent md:hover:text-green-700 md:p-2 ">About us</a>
+        </li>
+        <li>
+          <a href="#" class="block py-1 pl-3 pr-4 text-gray-400 rounded hover:bg-gray-100 md:hover:bg-transparent md:hover:text-green-700 md:p-1 ">
+            <button id="dropdownOffsetButton" data-dropdown-toggle="dropdownOffset" data-dropdown-offset-distance="44" data-dropdown-offset-skidding="0" class="text-gray-400 hover:bg-green-800 focus:ring-4 focus:outline-none focus:ring-green-400 font-medium rounded-lg text-sm px-1 py-1 text-center inline-flex items-center" type="button">E-waste Services<svg class="w-4 h-4 ml-2" aria-hidden="true" fill="none" stroke="currentColor" viewbox="0 0 24 24" xmlns="http://www.w3.org/2000/svg"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M19 9l-7 7-7-7"></path></svg></button></a>
+            <!-- Dropdown menu -->
+            <div id="dropdownOffset" class="z-10 hidden bg-black divide-y divide-gray-100 rounded-lg shadow w-44 border-2 border-green-800">
+              <ul class="py-2 text-sm text-white " aria-labelledby="dropdownDefault">
+                <li>
+                  <a href="ews.html" class="block px-4 py-2 hover:bg-green-800 ">Our Process</a>
+                </li>
+                <li>
+                  <a href="ews.html" class="block px-4 py-2 hover:bg-green-800 ">E-waste</a>
+                </li>
+                <li>
+                  <a href="ews.html" class="block px-4 py-2 hover:bg-green-800 ">Hazards</a>
+                </li>
+                
+              </ul>
+          </div>
+        </li>
+        <li>
+          <a href="#" class="block py-2 pl-3 pr-4 text-gray-400 rounded hover:bg-gray-100 md:hover:bg-transparent md:hover:text-green-700 md:p-2 ">Data Erasure</a>
+        </li>
+        <li>
+          <a href="asset.html" class="block py-2 pl-3 pr-4 text-white rounded bg-green-700 rounded md:bg-green-800 md:text-green-700 md:p-4 hover:bg-gray-100 md:hover:bg-transparent md:hover:text-green-700 md:p-2 ">Asset Management</a>
+        </li>
+        <li>
+          <a href="#" class="block py-1 pl-3 pr-4 text-gray-400 rounded  hover:bg-gray-100 md:hover:bg-transparent md:hover:text-green-700 md:p-2 ">          <button id="dropdownOffsetButton1" data-dropdown-toggle="dropdownOffset1" data-dropdown-offset-distance="44" data-dropdown-offset-skidding="0" class="text-gray-400 hover:bg-green-800 focus:ring-4 focus:outline-none focus:ring-green-400 font-medium rounded-lg text-sm px-1 py-1 text-center inline-flex items-center" type="button">Other Services<svg class="w-4 h-4 ml-2" aria-hidden="true" fill="none" stroke="currentColor" viewbox="0 0 24 24" xmlns="http://www.w3.org/2000/svg"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M19 9l-7 7-7-7"></path></svg></button></a>
+         <!-- Dropdown menu -->
+         <div id="dropdownOffset1" class="z-10 hidden bg-black divide-y divide-gray-100 rounded-lg shadow w-44 border-2 border-green-800">
+          <ul class="py-2 text-sm text-white " aria-labelledby="dropdownDefault">
+            <li>
+              <a href="services.html#ose" class="block px-4 py-2 hover:bg-green-800 ">Sewage Treatment</a>
+            </li>
+            <li>
+              <a href="services.html#oet" class="block px-4 py-2 hover:bg-green-800 ">Effluent Treatment</a>
+            </li>
+           
+          </ul>
+      </div>
+        </li>
+        <li>
+          <a href="#" class="block py-2 pl-3 pr-4 text-gray-400 rounded hover:bg-gray-100 md:hover:bg-transparent md:hover:text-green-700 md:p-2 ">Contact</a>
+        </li>
+      </ul>
+    </div>
+    </div>
+  </nav>
+  <!-- drawer component -->
+<div id="drawer-top-example" class="fixed top-0 left-0 right-0 z-40 w-full p-5 transition-transform -translate-y-full bg-black " tabindex="-1" aria-labelledby="drawer-top-label">
+    <h1 class="mb-4 text-4xl font-extrabold leading-none tracking-tight text-gray-900 md:text-5xl lg:text-6xl dark:text-white">Get in touch with <span class="text-green-600 ">EcoCredible</span></h1>
+    <button type="button" data-drawer-hide="drawer-top-example" aria-controls="drawer-top-example" class="text-gray-400 bg-transparent hover:bg-gray-200 hover:text-gray-900 rounded-lg text-sm p-1.5 absolute top-2.5 right-2.5 inline-flex items-center " >
+        <svg aria-hidden="true" class="w-5 h-5" fill="currentColor" viewbox="0 0 20 20" xmlns="http://www.w3.org/2000/svg"><path fill-rule="evenodd" d="M4.293 4.293a1 1 0 011.414 0L10 8.586l4.293-4.293a1 1 0 111.414 1.414L11.414 10l4.293 4.293a1 1 0 01-1.414 1.414L10 11.414l-4.293 4.293a1 1 0 01-1.414-1.414L8.586 10 4.293 5.707a1 1 0 010-1.414z" clip-rule="evenodd"></path></svg>
+        <span class="sr-only">Close menu</span>
+    </button>
+    <p class="max-w-lg mb-6 text-sm text-gray-500 ">Connect with us over our social media or call us now!<a href="#" class="text-blue-600 underline hover:no-underline">ecocredible</a>EcoCredible Enviro Solutions Pvt. Ltd. is a complete waste management company specializing in e-waste recycling while also offering solutions in Water and Waste Water Treatment and Solid Waste Management.</p>
+   <a href="#" class="px-4 py-2 mr-2 text-sm font-medium text-center text-gray-900 bg-white border border-gray-200 rounded-lg focus:outline-none hover:bg-gray-100 hover:text-blue-700 focus:z-10 focus:ring-4 focus:ring-gray-200 ">Learn more</a>
+   <a href="#" class="inline-flex items-center px-4 py-2 text-sm font-medium text-center text-white bg-green-700 rounded-lg hover:bg-green-800 focus:ring-4 focus:ring-green-300 ">Get access <svg class="w-4 h-4 ml-2" aria-hidden="true" fill="currentColor" viewbox="0 0 20 20" xmlns="http://www.w3.org/2000/svg"><path fill-rule="evenodd" d="M12.293 5.293a1 1 0 011.414 0l4 4a1 1 0 010 1.414l-4 4a1 1 0 01-1.414-1.414L14.586 11H3a1 1 0 110-2h11.586l-2.293-2.293a1 1 0 010-1.414z" clip-rule="evenodd"></path></svg></a>
+</div>
+</head>
+<body>
+   <br>
+   <br>
+   <br>
+    
+   <!-- Jumbotron -->
+<div
+class="relative overflow-hidden rounded-lg bg-cover bg-no-repeat p-12 text-center"
+style="background-image: url('https://tecdn.b-cdn.net/img/new/slides/041.webp'); height: 400px">
+<div
+  class="absolute top-0 right-0 bottom-0 left-0 h-full w-full overflow-hidden bg-fixed"
+  style="background-color: rgba(0, 0, 0, 0.6)">
+  <div class="flex h-full items-center justify-center">
+    <div class="text-white">
+        <br>
+        <br>
+        <h1 class="mb-4 text-3xl font-extrabold text-gray-900 dark:text-white md:text-5xl lg:text-6xl"><span class="text-transparent bg-clip-text bg-gradient-to-r to-emerald-600 from-sky-400">Asset</span> Management</h1>      
+        <h3 class="text-5xl font-extrabold dark:text-white">EcoCredible<small class="ml-2 font-semibold text-gray-500 dark:text-gray-400">strongly believes in the recycling adage of Reuse, Reduce and Recycle.</small></h3>
+        <br>
+        
+        
+      <button
+        type="button"
+        class="rounded border-2 border-neutral-50 px-7 pt-[10px] pb-[8px] text-sm font-medium uppercase leading-normal text-neutral-50 transition duration-150 ease-in-out hover:border-neutral-100 hover:bg-neutral-500 hover:bg-opacity-10 hover:text-neutral-100 focus:border-neutral-100 focus:text-neutral-100 focus:outline-none focus:ring-0 active:border-neutral-200 active:text-neutral-200 dark:hover:bg-neutral-100 dark:hover:bg-opacity-10"
+        data-te-ripple-init
+        data-te-ripple-color="light" data-drawer-target="drawer-top-example" data-drawer-show="drawer-top-example" data-drawer-placement="top" aria-controls="drawer-top-example">
+        Call us for more info
+      </button>
+    </div>
+  </div>
+</div>
+</div>
+<!-- Jumbotron -->
+<br>
+<br>
+<br>
+<br>
+<!-- Jumbotron -->
+<div
+  class="rounded-lg bg-black p-6 text-white shadow-lg ">
+  <h1 class="mb-4 text-4xl font-extrabold leading-none tracking-tight text-gray-900 md:text-5xl lg:text-6xl dark:text-white">Asset Management with <span class="text-blue-600 dark:text-blue-500">EcoCredible</span></h1> 
+<p class="mb-3 font-light text-gray-500 dark:text-gray-400" style="font-size: 40px;">Eco Credible strongly believes in the recycling adage of Reuse, Reduce and Recycle. With this in mind we offer take-back schemes on end of lifecycle products with the total approval and support of our clients.</p>
+<div class="grid grid-cols-1 md:gap-6 md:grid-cols-2">
+    <p class="mb-3 font-light text-gray-500 dark:text-gray-400" style="font-size: 30px;">This in turn helps us as a whole to Reduce the number of items produced to meet the people's needs and demands. Assets that fail the stringent Eco Credible checks are Recycled to complete the asset management cycle.</p>
+    <blockquote class="mb-3">
+        <p class="text-xl italic font-semibold text-gray-900 dark:text-white" style="font-size: 20px;">" Asset Management enables Eco Credible to Reuse the assets after ensuring that strict procedures are followed for Data Erasure and sanitization of the hardware. "</p>
+    </blockquote>
+</div>
+
+  <hr
+    class="my-6 h-0.5 border-t-0 bg-neutral-200 opacity-100 dark:opacity-30" />
+  <p class="mb-4" style="font-size: 30px;">
+    Certified to handle your e-waste, click below to know more.
+  </p>
+  <button
+    type="button"
+    data-te-ripple-init
+    data-te-ripple-color="light"
+    class="rounded bg-primary px-6 pt-2.5 pb-2 text-xs font-medium uppercase leading-normal text-white shadow-[0_4px_9px_-4px_#3b71ca] transition duration-150 ease-in-out hover:bg-primary-600 hover:shadow-[0_8px_9px_-4px_rgba(59,113,202,0.3),0_4px_18px_0_rgba(59,113,202,0.2)] focus:bg-primary-600 focus:shadow-[0_8px_9px_-4px_rgba(59,113,202,0.3),0_4px_18px_0_rgba(59,113,202,0.2)] focus:outline-none focus:ring-0 active:bg-primary-700 active:shadow-[0_8px_9px_-4px_rgba(59,113,202,0.3),0_4px_18px_0_rgba(59,113,202,0.2)]">
+    Learn more
+  </button>
+</div>
+<!-- Jumbotron -->
+
+    <br>
+    <br>
+    <br>
+    <br>
+<div class="w-full p-2 m-auto bg-black border border-green-800 rounded-lg shadow ">
+    <div class="sm:hidden">
+        <label for="tabs" class="sr-only">Select tab</label>
+        <select id="tabs" class="bg-gray-50 border-0 border-b border-gray-200 text-gray-900 text-sm rounded-t-lg focus:ring-blue-500 focus:border-blue-500 block w-full p-2.5 dark:bg-gray-700 dark:border-gray-600 dark:placeholder-gray-400 dark:text-white dark:focus:ring-blue-500 dark:focus:border-blue-500">
+            <option>Statistics</option>
+            <option>Services</option>
+            <option>FAQ</option>
+        </select>
+    </div>
+    <ul class="hidden text-sm font-medium text-center text-gray-500 divide-x divide-gray-200 rounded-lg sm:flex dark:divide-gray-600 dark:text-gray-400" id="fullWidthTab" data-tabs-toggle="#fullWidthTabContent" role="tablist">
+        <li class="w-full">
+            <button id="stats-tab" data-tabs-target="#stats" type="button" role="tab" aria-controls="stats" aria-selected="true" class="inline-block w-full p-4 rounded-tl-lg bg-gray-50 hover:bg-gray-100 focus:outline-none dark:bg-gray-700 dark:hover:bg-gray-600">Statistics</button>
+        </li>
+        <li class="w-full">
+            <button id="about-tab" data-tabs-target="#about" type="button" role="tab" aria-controls="about" aria-selected="false" class="inline-block w-full p-4 bg-gray-50 hover:bg-gray-100 focus:outline-none dark:bg-gray-700 dark:hover:bg-gray-600">Services</button>
+        </li>
+        <li class="w-full">
+            <button id="faq-tab" data-tabs-target="#faq" type="button" role="tab" aria-controls="faq" aria-selected="false" class="inline-block w-full p-4 rounded-tr-lg bg-gray-50 hover:bg-gray-100 focus:outline-none dark:bg-gray-700 dark:hover:bg-gray-600">FAQ</button>
+        </li>
+    </ul>
+    <div id="fullWidthTabContent" class="border-t border-gray-200 dark:border-gray-600">
+        <div class="hidden p-4 bg-black rounded-lg md:p-8 dark:bg-gray-800" id="stats" role="tabpanel" aria-labelledby="stats-tab">
+            <dl class="grid max-w-screen-xl grid-cols-2 gap-8 p-4 mx-auto text-gray-900 sm:grid-cols-3 xl:grid-cols-6 dark:text-white sm:p-8">
+                <div class="flex flex-col items-center justify-center">
+                    <dt class="mb-2 text-3xl font-extrabold">73M+</dt>
+                    <dd class="font-light text-gray-500 dark:text-gray-400">Developers</dd>
+                </div>
+                <div class="flex flex-col items-center justify-center">
+                    <dt class="mb-2 text-3xl font-extrabold">100M+</dt>
+                    <dd class="font-light text-gray-500 dark:text-gray-400">Public repositories</dd>
+                </div>
+                <div class="flex flex-col items-center justify-center">
+                    <dt class="mb-2 text-3xl font-extrabold">1000s</dt>
+                    <dd class="font-light text-gray-500 dark:text-gray-400">Open source projects</dd>
+                </div>
+                <div class="flex flex-col items-center justify-center">
+                    <dt class="mb-2 text-3xl font-extrabold">1B+</dt>
+                    <dd class="font-light text-gray-500 dark:text-gray-400">Contributors</dd>
+                </div>
+                <div class="flex flex-col items-center justify-center">
+                    <dt class="mb-2 text-3xl font-extrabold">90+</dt>
+                    <dd class="font-light text-gray-500 dark:text-gray-400">Top Forbes companies</dd>
+                </div>
+                <div class="flex flex-col items-center justify-center">
+                    <dt class="mb-2 text-3xl font-extrabold">4M+</dt>
+                    <dd class="font-light text-gray-500 dark:text-gray-400">Organizations</dd>
+                </div>
+            </dl>
+        </div>
+        <div class="hidden p-4 bg-black rounded-lg md:p-8 dark:bg-gray-800" id="about" role="tabpanel" aria-labelledby="about-tab">
+            <h2 class="mb-5 text-2xl font-extrabold tracking-tight text-gray-900 dark:text-white">We invest in the world’s potential</h2>
+            <!-- List -->
+            <ul role="list" class="space-y-4 text-gray-500 dark:text-gray-400">
+                <li class="flex space-x-2">
+                    <!-- Icon -->
+                    <svg class="flex-shrink-0 w-4 h-4 text-blue-600 dark:text-blue-500" fill="currentColor" viewbox="0 0 20 20" xmlns="http://www.w3.org/2000/svg"><path fill-rule="evenodd" d="M10 18a8 8 0 100-16 8 8 0 000 16zm3.707-9.293a1 1 0 00-1.414-1.414L9 10.586 7.707 9.293a1 1 0 00-1.414 1.414l2 2a1 1 0 001.414 0l4-4z" clip-rule="evenodd"></path></svg>
+                    <span class="font-light leading-tight">Dynamic reports and dashboards</span>
+                </li>
+                <li class="flex space-x-2">
+                    <!-- Icon -->
+                    <svg class="flex-shrink-0 w-4 h-4 text-blue-600 dark:text-blue-500" fill="currentColor" viewbox="0 0 20 20" xmlns="http://www.w3.org/2000/svg"><path fill-rule="evenodd" d="M10 18a8 8 0 100-16 8 8 0 000 16zm3.707-9.293a1 1 0 00-1.414-1.414L9 10.586 7.707 9.293a1 1 0 00-1.414 1.414l2 2a1 1 0 001.414 0l4-4z" clip-rule="evenodd"></path></svg>
+                    <span class="font-light leading-tight">Templates for everyone</span>
+                </li>
+                <li class="flex space-x-2">
+                    <!-- Icon -->
+                    <svg class="flex-shrink-0 w-4 h-4 text-blue-600 dark:text-blue-500" fill="currentColor" viewbox="0 0 20 20" xmlns="http://www.w3.org/2000/svg"><path fill-rule="evenodd" d="M10 18a8 8 0 100-16 8 8 0 000 16zm3.707-9.293a1 1 0 00-1.414-1.414L9 10.586 7.707 9.293a1 1 0 00-1.414 1.414l2 2a1 1 0 001.414 0l4-4z" clip-rule="evenodd"></path></svg>
+                    <span class="font-light leading-tight">Development workflow</span>
+                </li>
+                <li class="flex space-x-2">
+                    <!-- Icon -->
+                    <svg class="flex-shrink-0 w-4 h-4 text-blue-600 dark:text-blue-500" fill="currentColor" viewbox="0 0 20 20" xmlns="http://www.w3.org/2000/svg"><path fill-rule="evenodd" d="M10 18a8 8 0 100-16 8 8 0 000 16zm3.707-9.293a1 1 0 00-1.414-1.414L9 10.586 7.707 9.293a1 1 0 00-1.414 1.414l2 2a1 1 0 001.414 0l4-4z" clip-rule="evenodd"></path></svg>
+                    <span class="font-light leading-tight">Limitless business automation</span>
+                </li>
+            </ul>
+        </div>
+        <div class="hidden p-4 bg-black rounded-lg md:p-8 dark:bg-gray-800" id="faq" role="tabpanel" aria-labelledby="faq-tab">
+            <div id="accordion-flush" data-accordion="collapse" data-active-classes="bg-black dark:bg-gray-800 text-gray-900 dark:text-white" data-inactive-classes="text-gray-500 dark:text-gray-400">
+                <h2 id="accordion-flush-heading-1">
+                    <button type="button" class="flex items-center justify-between w-full py-5 font-medium text-left text-gray-500 border-b border-gray-200 dark:border-gray-700 dark:text-gray-400" data-accordion-target="#accordion-flush-body-1" aria-expanded="true" aria-controls="accordion-flush-body-1">
+                    <span>What is Flowbite?</span>
+                    <svg data-accordion-icon class="w-6 h-6 rotate-180 shrink-0" fill="currentColor" viewbox="0 0 20 20" xmlns="http://www.w3.org/2000/svg"><path fill-rule="evenodd" d="M5.293 7.293a1 1 0 011.414 0L10 10.586l3.293-3.293a1 1 0 111.414 1.414l-4 4a1 1 0 01-1.414 0l-4-4a1 1 0 010-1.414z" clip-rule="evenodd"></path></svg>
+                    </button>
+                </h2>
+                <div id="accordion-flush-body-1" class="hidden" aria-labelledby="accordion-flush-heading-1">
+                    <div class="py-5 font-light border-b border-gray-200 dark:border-gray-700">
+                    <p class="mb-2 text-gray-500 dark:text-gray-400">Flowbite is an open-source library of interactive components built on top of Tailwind CSS including buttons, dropdowns, modals, navbars, and more.</p>
+                    <p class="text-gray-500 dark:text-gray-400">Check out this guide to learn how to <a href="/docs/getting-started/introduction/" class="text-blue-600 dark:text-blue-500 hover:underline">get started</a> and start developing websites even faster with components on top of Tailwind CSS.</p>
+                    </div>
+                </div>
+                <h2 id="accordion-flush-heading-2">
+                    <button type="button" class="flex items-center justify-between w-full py-5 font-medium text-left text-gray-500 border-b border-gray-200 dark:border-gray-700 dark:text-gray-400" data-accordion-target="#accordion-flush-body-2" aria-expanded="false" aria-controls="accordion-flush-body-2">
+                    <span>Is there a Figma file available?</span>
+                    <svg data-accordion-icon class="w-6 h-6 shrink-0" fill="currentColor" viewbox="0 0 20 20" xmlns="http://www.w3.org/2000/svg"><path fill-rule="evenodd" d="M5.293 7.293a1 1 0 011.414 0L10 10.586l3.293-3.293a1 1 0 111.414 1.414l-4 4a1 1 0 01-1.414 0l-4-4a1 1 0 010-1.414z" clip-rule="evenodd"></path></svg>
+                    </button>
+                </h2>
+                <div id="accordion-flush-body-2" class="hidden" aria-labelledby="accordion-flush-heading-2">
+                    <div class="py-5 font-light border-b border-gray-200 dark:border-gray-700">
+                    <p class="mb-2 text-gray-500 dark:text-gray-400">Flowbite is first conceptualized and designed using the Figma software so everything you see in the library has a design equivalent in our Figma file.</p>
+                    <p class="text-gray-500 dark:text-gray-400">Check out the <a href="https://flowbite.com/figma/" class="text-blue-600 dark:text-blue-500 hover:underline">Figma design system</a> based on the utility classes from Tailwind CSS and components from Flowbite.</p>
+                    </div>
+                </div>
+                <h2 id="accordion-flush-heading-3">
+                    <button type="button" class="flex items-center justify-between w-full py-5 font-medium text-left text-gray-500 border-b border-gray-200 dark:border-gray-700 dark:text-gray-400" data-accordion-target="#accordion-flush-body-3" aria-expanded="false" aria-controls="accordion-flush-body-3">
+                    <span>What are the differences between Flowbite and Tailwind UI?</span>
+                    <svg data-accordion-icon class="w-6 h-6 shrink-0" fill="currentColor" viewbox="0 0 20 20" xmlns="http://www.w3.org/2000/svg"><path fill-rule="evenodd" d="M5.293 7.293a1 1 0 011.414 0L10 10.586l3.293-3.293a1 1 0 111.414 1.414l-4 4a1 1 0 01-1.414 0l-4-4a1 1 0 010-1.414z" clip-rule="evenodd"></path></svg>
+                    </button>
+                </h2>
+                <div id="accordion-flush-body-3" class="hidden" aria-labelledby="accordion-flush-heading-3">
+                    <div class="py-5 font-light border-b border-gray-200 dark:border-gray-700">
+                    <p class="mb-2 text-gray-500 dark:text-gray-400">The main difference is that the core components from Flowbite are open source under the MIT license, whereas Tailwind UI is a paid product. Another difference is that Flowbite relies on smaller and standalone components, whereas Tailwind UI offers sections of pages.</p>
+                    <p class="mb-2 text-gray-500 dark:text-gray-400">However, we actually recommend using both Flowbite, Flowbite Pro, and even Tailwind UI as there is no technical reason stopping you from using the best of two worlds.</p>
+                    <p class="mb-2 text-gray-500 dark:text-gray-400">Learn more about these technologies:</p>
+                    <ul class="pl-5 text-gray-500 list-disc dark:text-gray-400">
+                        <li><a href="https://flowbite.com/pro/" class="text-blue-600 dark:text-blue-500 hover:underline">Flowbite Pro</a></li>
+                        <li><a href="https://tailwindui.com/" rel="nofollow" class="text-blue-600 dark:text-blue-500 hover:underline">Tailwind UI</a></li>
+                    </ul>
+                    </div>
+                </div>
+                </div>
+        </div>
+    </div>
+</div>
+<br>
+<br>
+<br>
+<br>
+
+
+<div class="grid mb-8 m-3 border border-gray-200 rounded-lg shadow-sm dark:border-gray-700 md:mb-12 md:grid-cols-2">
+    <figure class="flex flex-col items-center justify-center p-8 text-center bg-black border-b border-gray-200 rounded-t-lg md:rounded-t-none md:rounded-tl-lg md:border-r dark:bg-gray-800 dark:border-gray-700">
+        <blockquote class="max-w-2xl mx-auto mb-4 text-gray-500 lg:mb-8 dark:text-gray-400">
+            <h3 class="text-lg font-semibold text-gray-900 dark:text-white">Very easy this was to integrate</h3>
+            <p class="my-4 font-light">If you care for your time, I hands down would go with this."</p>
+        </blockquote>
+        <figcaption class="flex items-center justify-center space-x-3">
+            <img class="rounded-full w-9 h-9" src="https://flowbite.s3.amazonaws.com/blocks/marketing-ui/avatars/karen-nelson.png" alt="profile picture">
+            <div class="space-y-0.5 font-medium dark:text-white text-left">
+                <div>Bonnie Green</div>
+                <div class="text-sm font-light text-gray-500 dark:text-gray-400">Developer at Open AI</div>
+            </div>
+        </figcaption>    
+    </figure>
+    <figure class="flex flex-col items-center justify-center p-8 text-center bg-black border-b border-gray-200 rounded-tr-lg dark:bg-gray-800 dark:border-gray-700">
+        <blockquote class="max-w-2xl mx-auto mb-4 text-gray-500 lg:mb-8 dark:text-gray-400">
+            <h3 class="text-lg font-semibold text-gray-900 dark:text-white">Solid foundation for any project</h3>
+            <p class="my-4 font-light">Designing with Figma components that can be easily translated to the utility classes of Tailwind CSS is a huge timesaver!"</p>
+        </blockquote>
+        <figcaption class="flex items-center justify-center space-x-3">
+            <img class="rounded-full w-9 h-9" src="https://flowbite.s3.amazonaws.com/blocks/marketing-ui/avatars/roberta-casas.png" alt="profile picture">
+            <div class="space-y-0.5 font-medium dark:text-white text-left">
+                <div>Roberta Casas</div>
+                <div class="text-sm font-light text-gray-500 dark:text-gray-400">Lead designer at Dropbox</div>
+            </div>
+        </figcaption>    
+    </figure>
+    <figure class="flex flex-col items-center justify-center p-8 text-center bg-black border-b border-gray-200 rounded-bl-lg md:border-b-0 md:border-r dark:bg-gray-800 dark:border-gray-700">
+        <blockquote class="max-w-2xl mx-auto mb-4 text-gray-500 lg:mb-8 dark:text-gray-400">
+            <h3 class="text-lg font-semibold text-gray-900 dark:text-white">Mindblowing workflow</h3>
+            <p class="my-4 font-light">Aesthetically, the well designed components are beautiful and will undoubtedly level up your next application."</p>
+        </blockquote>
+        <figcaption class="flex items-center justify-center space-x-3">
+            <img class="rounded-full w-9 h-9" src="https://flowbite.s3.amazonaws.com/blocks/marketing-ui/avatars/jese-leos.png" alt="profile picture">
+            <div class="space-y-0.5 font-medium dark:text-white text-left">
+                <div>Jese Leos</div>
+                <div class="text-sm font-light text-gray-500 dark:text-gray-400">Software Engineer at Facebook</div>
+            </div>
+        </figcaption>    
+    </figure>
+    <figure class="flex flex-col items-center justify-center p-8 text-center bg-black border-gray-200 rounded-b-lg md:rounded-br-lg dark:bg-gray-800 dark:border-gray-700">
+        <blockquote class="max-w-2xl mx-auto mb-4 text-gray-500 lg:mb-8 dark:text-gray-400">
+            <h3 class="text-lg font-semibold text-gray-900 dark:text-white">Efficient Collaborating</h3>
+            <p class="my-4 font-light">You have many examples that can be used to create a fast prototype for your team."</p>
+        </blockquote>
+        <figcaption class="flex items-center justify-center space-x-3">
+            <img class="rounded-full w-9 h-9" src="https://flowbite.s3.amazonaws.com/blocks/marketing-ui/avatars/joseph-mcfall.png" alt="profile picture">
+            <div class="space-y-0.5 font-medium dark:text-white text-left">
+                <div>Joseph McFall</div>
+                <div class="text-sm font-light text-gray-500 dark:text-gray-400">CTO at Google</div>
+            </div>
+        </figcaption>    
+    </figure>
+</div>
+
+
+  <!-- <div style="display: flex; flex-wrap: wrap; justify-content: space-between;">
+    <div style="flex: 1; padding: 10px;">
+
+
+            
+    </div>
+    <div style="flex: 1; padding: 10px;">
+        
+
+
+
+    </div>
+  </div>
+   -->
+<br>
+<br>
+<br>
+<br>
+<footer class="p-4 bg-black sm:p-6 ">
+    <div class="md:flex md:justify-between">
+        <div class="mb-6 md:mb-0">
+            <a href="index.html" class="flex items-center">
+                <img src="resources/ecocredible.png" class="h-8 mr-3" alt="FlowBite Logo" />
+                <span class="self-center text-2xl font-semibold whitespace-nowrap dark:text-white">EcoCredible</span>
+            </a>
+        </div>
+        <div class="grid grid-cols-2 gap-8 sm:gap-6 sm:grid-cols-3">
+            <div>
+                <h2 class="mb-6 text-sm font-semibold text-gray-900 uppercase dark:text-white">Resources</h2>
+                <ul class="text-gray-600 dark:text-gray-400">
+                    <li class="mb-4">
+                        <a href="https://flowbite.com/" class="hover:underline">Flowbite</a>
+                    </li>
+                    <li>
+                        <a href="https://tailwindcss.com/" class="hover:underline">Tailwind CSS</a>
+                    </li>
+                </ul>
+            </div>
+            <div>
+                <h2 class="mb-6 text-sm font-semibold text-gray-900 uppercase dark:text-white">Follow us</h2>
+                <ul class="text-gray-600 dark:text-gray-400">
+                    <li class="mb-4">
+                        <a href="https://github.com/themesberg/flowbite" class="hover:underline ">Facebook</a>
+                    </li>
+                    <li>
+                        <a href="https://discord.gg/4eeurUVvTy" class="hover:underline">Discord</a>
+                    </li>
+                </ul>
+            </div>
+            <div>
+                <h2 class="mb-6 text-sm font-semibold text-gray-900 uppercase dark:text-white">Legal</h2>
+                <ul class="text-gray-600 dark:text-gray-400">
+                    <li class="mb-4">
+                        <a href="#" class="hover:underline">Privacy Policy</a>
+                    </li>
+                    <li>
+                        <a href="#" class="hover:underline">Terms &amp; Conditions</a>
+                    </li>
+                </ul>
+            </div>
+        </div>
+    </div>
+    <hr class="my-6 border-gray-200 sm:mx-auto dark:border-gray-700 lg:my-8" />
+    <div class="sm:flex sm:items-center sm:justify-between">
+        <span class="text-sm text-gray-500 sm:text-center dark:text-gray-400">© 2023 <a href="https://flowbite.com/" class="hover:underline">EcoCredible™</a>. All Rights Reserved.
+        </span>
+        <div class="flex mt-4 space-x-6 sm:justify-center sm:mt-0">
+            <a href="#" class="text-gray-500 hover:text-gray-900 dark:hover:text-white">
+                <svg class="w-5 h-5" fill="currentColor" viewbox="0 0 24 24" aria-hidden="true"><path fill-rule="evenodd" d="M22 12c0-5.523-4.477-10-10-10S2 6.477 2 12c0 4.991 3.657 9.128 8.438 9.878v-6.987h-2.54V12h2.54V9.797c0-2.506 1.492-3.89 3.777-3.89 1.094 0 2.238.195 2.238.195v2.46h-1.26c-1.243 0-1.63.771-1.63 1.562V12h2.773l-.443 2.89h-2.33v6.988C18.343 21.128 22 16.991 22 12z" clip-rule="evenodd" /></svg>
+                <span class="sr-only">Facebook page</span>
+            </a>
+            <a href="#" class="text-gray-500 hover:text-gray-900 dark:hover:text-white">
+                <svg class="w-5 h-5" fill="currentColor" viewbox="0 0 24 24" aria-hidden="true"><path fill-rule="evenodd" d="M12.315 2c2.43 0 2.784.013 3.808.06 1.064.049 1.791.218 2.427.465a4.902 4.902 0 011.772 1.153 4.902 4.902 0 011.153 1.772c.247.636.416 1.363.465 2.427.048 1.067.06 1.407.06 4.123v.08c0 2.643-.012 2.987-.06 4.043-.049 1.064-.218 1.791-.465 2.427a4.902 4.902 0 01-1.153 1.772 4.902 4.902 0 01-1.772 1.153c-.636.247-1.363.416-2.427.465-1.067.048-1.407.06-4.123.06h-.08c-2.643 0-2.987-.012-4.043-.06-1.064-.049-1.791-.218-2.427-.465a4.902 4.902 0 01-1.772-1.153 4.902 4.902 0 01-1.153-1.772c-.247-.636-.416-1.363-.465-2.427-.047-1.024-.06-1.379-.06-3.808v-.63c0-2.43.013-2.784.06-3.808.049-1.064.218-1.791.465-2.427a4.902 4.902 0 011.153-1.772A4.902 4.902 0 015.45 2.525c.636-.247 1.363-.416 2.427-.465C8.901 2.013 9.256 2 11.685 2h.63zm-.081 1.802h-.468c-2.456 0-2.784.011-3.807.058-.975.045-1.504.207-1.857.344-.467.182-.8.398-1.15.748-.35.35-.566.683-.748 1.15-.137.353-.3.882-.344 1.857-.047 1.023-.058 1.351-.058 3.807v.468c0 2.456.011 2.784.058 3.807.045.975.207 1.504.344 1.857.182.466.399.8.748 1.15.35.35.683.566 1.15.748.353.137.882.3 1.857.344 1.054.048 1.37.058 4.041.058h.08c2.597 0 2.917-.01 3.96-.058.976-.045 1.505-.207 1.858-.344.466-.182.8-.398 1.15-.748.35-.35.566-.683.748-1.15.137-.353.3-.882.344-1.857.048-1.055.058-1.37.058-4.041v-.08c0-2.597-.01-2.917-.058-3.96-.045-.976-.207-1.505-.344-1.858a3.097 3.097 0 00-.748-1.15 3.098 3.098 0 00-1.15-.748c-.353-.137-.882-.3-1.857-.344-1.023-.047-1.351-.058-3.807-.058zM12 6.865a5.135 5.135 0 110 10.27 5.135 5.135 0 010-10.27zm0 1.802a3.333 3.333 0 100 6.666 3.333 3.333 0 000-6.666zm5.338-3.205a1.2 1.2 0 110 2.4 1.2 1.2 0 010-2.4z" clip-rule="evenodd" /></svg>
+                <span class="sr-only">Instagram page</span>
+            </a>
+            <a href="#" class="text-gray-500 hover:text-gray-900 dark:hover:text-white">
+                <svg class="w-5 h-5" fill="currentColor" viewbox="0 0 24 24" aria-hidden="true"><path d="M8.29 20.251c7.547 0 11.675-6.253 11.675-11.675 0-.178 0-.355-.012-.53A8.348 8.348 0 0022 5.92a8.19 8.19 0 01-2.357.646 4.118 4.118 0 001.804-2.27 8.224 8.224 0 01-2.605.996 4.107 4.107 0 00-6.993 3.743 11.65 11.65 0 01-8.457-4.287 4.106 4.106 0 001.27 5.477A4.072 4.072 0 012.8 9.713v.052a4.105 4.105 0 003.292 4.022 4.095 4.095 0 01-1.853.07 4.108 4.108 0 003.834 2.85A8.233 8.233 0 012 18.407a11.616 11.616 0 006.29 1.84" /></svg>
+                <span class="sr-only">Twitter page</span>
+            </a>
+            <a href="#" class="text-gray-500 hover:text-gray-900 dark:hover:text-white">
+                <svg class="w-5 h-5" fill="currentColor" viewbox="0 0 24 24" aria-hidden="true"><path fill-rule="evenodd" d="M12 2C6.477 2 2 6.484 2 12.017c0 4.425 2.865 8.18 6.839 9.504.5.092.682-.217.682-.483 0-.237-.008-.868-.013-1.703-2.782.605-3.369-1.343-3.369-1.343-.454-1.158-1.11-1.466-1.11-1.466-.908-.62.069-.608.069-.608 1.003.07 1.531 1.032 1.531 1.032.892 1.53 2.341 1.088 2.91.832.092-.647.35-1.088.636-1.338-2.22-.253-4.555-1.113-4.555-4.951 0-1.093.39-1.988 1.029-2.688-.103-.253-.446-1.272.098-2.65 0 0 .84-.27 2.75 1.026A9.564 9.564 0 0112 6.844c.85.004 1.705.115 2.504.337 1.909-1.296 2.747-1.027 2.747-1.027.546 1.379.202 2.398.1 2.651.64.7 1.028 1.595 1.028 2.688 0 3.848-2.339 4.695-4.566 4.943.359.309.678.92.678 1.855 0 1.338-.012 2.419-.012 2.747 0 .268.18.58.688.482A10.019 10.019 0 0022 12.017C22 6.484 17.522 2 12 2z" clip-rule="evenodd" /></svg>
+                <span class="sr-only">GitHub account</span>
+            </a>
+            <a href="#" class="text-gray-500 hover:text-gray-900 dark:hover:text-white">
+                <svg class="w-5 h-5" fill="currentColor" viewbox="0 0 24 24" aria-hidden="true"><path fill-rule="evenodd" d="M12 2C6.48 2 2 6.48 2 12s4.48 10 10 10c5.51 0 10-4.48 10-10S17.51 2 12 2zm6.605 4.61a8.502 8.502 0 011.93 5.314c-.281-.054-3.101-.629-5.943-.271-.065-.141-.12-.293-.184-.445a25.416 25.416 0 00-.564-1.236c3.145-1.28 4.577-3.124 4.761-3.362zM12 3.475c2.17 0 4.154.813 5.662 2.148-.152.216-1.443 1.941-4.48 3.08-1.399-2.57-2.95-4.675-3.189-5A8.687 8.687 0 0112 3.475zm-3.633.803a53.896 53.896 0 013.167 4.935c-3.992 1.063-7.517 1.04-7.896 1.04a8.581 8.581 0 014.729-5.975zM3.453 12.01v-.26c.37.01 4.512.065 8.775-1.215.25.477.477.965.694 1.453-.109.033-.228.065-.336.098-4.404 1.42-6.747 5.303-6.942 5.629a8.522 8.522 0 01-2.19-5.705zM12 20.547a8.482 8.482 0 01-5.239-1.8c.152-.315 1.888-3.656 6.703-5.337.022-.01.033-.01.054-.022a35.318 35.318 0 011.823 6.475 8.4 8.4 0 01-3.341.684zm4.761-1.465c-.086-.52-.542-3.015-1.659-6.084 2.679-.423 5.022.271 5.314.369a8.468 8.468 0 01-3.655 5.715z" clip-rule="evenodd" /></svg>
+                <span class="sr-only">Dribbbel account</span>
+            </a>    
+        </div>
+    </div>
+  </footer>
+
+</body>
+</html>
